@@ -1,0 +1,31 @@
+function reverseWords(str) {
+    // Split the string into an array of words
+    //    const words = str.split(/\s+/);
+
+    const words = str.split(" ");
+
+    // Reverse words with five letters or more
+    const reversedWords = words.map(word => (word.length >= 5) ? word.split('').reverse().join('') : word);
+
+    // Join the reversed words back into a string
+    const result = reversedWords.join(' ');
+
+    return result;
+}
+
+// Example usage:
+const inputString = "Reverse the order of words with five letters or more";
+const reversedString = reverseWords(inputString);
+console.log(reversedString);
+
+//Deepak
+
+function deepakReversed(str){
+    const dwords = str.split(" ");
+    
+    const reversedWords = dwords.map(dword => (dword.length > 5) ? dword.split("").reverse().join("") : dword)
+
+    return reversedWords.join(" ")
+}
+
+console.log(deepakReversed("Reverse the order of"))

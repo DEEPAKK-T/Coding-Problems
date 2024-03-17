@@ -1,0 +1,53 @@
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+// O(n2)
+var twoSum = function(nums, target) {
+
+    var resultArr = []
+
+    //Loop for each element of the array
+    for(let i = 0; i < nums.length; i ++){
+        //Loop for each other element of the array
+        for(let j = i + 1; j < nums.length; j ++){
+            //If sum of two elemts matched target
+            if(nums[i] + nums[j] === target){
+                resultArr.push(i, j)
+            }
+        }
+    }
+    //Result resulting array with indices of the two numbers such that they add up to target 
+    return resultArr;
+    
+};
+
+console.log(twoSum([2,7,3], 9))
+
+//Use HashTable for O(n)
+
+function twoSumHash(nums, target){
+    //Initialize empty array for result
+    var sums = []
+    //Initialize empty array
+    var hashTable = {}
+
+    for(let i = 0; i < nums.length; i ++){
+
+        //calulate target - sum 
+        var targetMinusCurrent = target - nums[i]
+
+        //check if hashtable contains targetMinusCurrent if exists found pair
+        if(hashTable[targetMinusCurrent.toString()] !== undefined){
+            sums.push(targetMinusCurrent, nums[i])
+        }
+
+        //push current element to hashtable
+        hashTable[nums[i].toString()] = nums[i]
+    }
+
+    return sums
+}
+
+console.log(twoSumHash([2,7,3], 9))

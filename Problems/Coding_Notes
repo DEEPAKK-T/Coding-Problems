@@ -1,0 +1,22 @@
+https://coderbyte.com/algorithm/two-sum-problem
+
+# HashTable
+Imagine a library with tons of books. Finding a specific book can be time-consuming if you have to check each shelf one by one. But what if there was a special index card system that tells you exactly which shelf a book is on? That's like a hashtable!
+
+Here's the simple explanation:
+
+A hashtable is like a fancy dictionary, but instead of words, it stores any kind of information (names, phone numbers, website addresses, etc.).
+Each piece of information is like a book, and instead of a title, it has a unique "key" that identifies it.
+Just like the library index cards, the hashtable uses a special "hash function" to quickly figure out where to store each piece of information based on its key.
+Think of the hash function as a super fast librarian who takes a book key and immediately tells you which shelf it's on, without having to check every shelf.
+Benefits of using a hashtable:
+
+Super fast lookup: No more checking every item like a regular list. With a hashtable, you can find information in almost no time!
+Organized storage: Everything is neatly stored based on its key, making it easy to find and keep track of information.
+Flexible data types: Can store all kinds of information, not just simple strings like in a dictionary.
+Things to remember:
+
+Hashtables aren't perfect. Finding the right hash function is important, and sometimes there might be collisions (different keys ending up in the same spot). But usually, hashtables are super helpful for keeping your information organized and easily accessible.
+So, next time you think about finding something quickly, remember the trusty hashtable – the library index card system for the digital age!
+
+I hope this simple explanation makes hashtables easier to understand. If you have any more questions, feel free to ask!

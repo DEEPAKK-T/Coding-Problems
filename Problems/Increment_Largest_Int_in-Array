@@ -1,0 +1,16 @@
+function increaseLargest(arr){
+    if(arr.length == 0){
+        return [];
+    }
+
+    const largestElement = Math.max(...arr)
+    const largestElementIndex = arr.indexOf(largestElement)
+
+    const newArr = arr;
+    newArr[largestElementIndex] = largestElement + 1;
+
+    return newArr
+
+}
+
+console.log(increaseLargest([1,2,9,8,20,3]))
