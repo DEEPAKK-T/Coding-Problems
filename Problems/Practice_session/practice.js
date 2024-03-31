@@ -410,5 +410,26 @@ function ThreeSumProb(arr, target){
 
 console.log(ThreeSumProb([1,3,4,6,5,7], 14))
 
+function ThreeSum(arr){
+    var resultArr = [] 
+
+    for(let i = 0; i < arr.length - 2; i ++){
+        if(i > 0 && arr[i] === arr[i - 1]) continue
+        for(let j = i + 1; j < arr.length; j ++){
+            if(j > i + 1 && arr[j] === arr[j - 1]) continue
+            for(let k = j + 1; k < arr.length; k ++){
+                if(k > j + 1 && arr[k] === arr[k - 1]) continue
+                if(arr[i] + arr[j] + arr[k] == 0){
+                    resultArr.push([arr[i], arr[j], arr[k]])
+                }
+            }
+        }
+    }
+    return resultArr
+}
+
+console.log("...............................")
+console.log(ThreeSum([-1,0,1,2,-1,-4]))
+
 
 
