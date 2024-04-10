@@ -100,3 +100,31 @@ const unbalancedString = "{[()";
 console.log(BalancedBrackets(balancedString))
 console.log(BalancedBrackets(unbalancedString))
 
+
+function BalanceBrackets(str){
+    
+    let stack = [];
+
+    let BracketMap = {
+        '{' : '}',
+        '[' : ']',
+        '(' : ')'
+    }
+
+    for(let char of str){
+        if(BracketMap[char]){
+            stack.push(char)
+        } else {
+            if( stack.length === 0 || BracketMap[stack.pop()] != char){
+                return false
+            }
+        }
+    }
+
+    return stack.length === 0
+}
+
+console.log("*****************************************************")
+
+console.log(BalanceBrackets(balancedString))
+console.log(BalanceBrackets(unbalancedString))
